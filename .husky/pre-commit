@@ -22,3 +22,7 @@ echo -e "\n${red}COMMIT REJECTED!  Found console. references. Please remove them
 exit 1;
 fi
 
+#execute lint-staged script
+exec >/dev/tty 2>&1
+
+npx lint-staged
